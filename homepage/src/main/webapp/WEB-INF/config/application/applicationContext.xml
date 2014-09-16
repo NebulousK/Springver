@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- 디비연결하는거 여기다가 하기!! 
+	디스패처 서블릿보다 먼저 생성되므로, 여기서 미리 선언하고 공유할수 있다. -->
+	<!-- JDNI -->
+	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+		<property name="jndiName">
+			<value>jdbc/springDB</value>
+		</property>
+		<property name="resourceRef" value="true"></property>
+	</bean>
+	
+	
+	<!-- DB정보 넘겨주기 
+	실제로 디비 사용 가능하다 -->
+	<!-- JdbcTemplate -->
+	<bean id="jdbc" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+
+	<bean id="memberDao" class="sns.member.repository.memberDaoImpl">
+		<property name="jdbcTemplate" ref="jdbc"></property>
+	</bean>
+	
+
+	
+</beans>

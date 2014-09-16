@@ -1,0 +1,120 @@
+﻿/*!CK:4124146026!*/ /*1397569257,178134361*/
+._1lvl {
+	background-color: #f7f7f7;
+	border-bottom: 1px dashed #ced5e5;
+	margin-top: -5px;
+	min-height: 135px;
+	overflow: hidden;
+	position: relative
+}
+
+._1lvm {
+	margin-right: 365px;
+	padding: 15px;
+	padding-right: 0
+}
+
+._1lvn {
+	line-height: 1.28
+}
+
+html ._1lvo {
+	position: absolute;
+	right: 0;
+	top: -9px
+}
+
+.hasSmurfbar ._1lvo {
+	right: -9px;
+	top: -10px
+}
+
+._1lvp {
+	margin: 0 2px
+}
+
+._1lvq {
+	opacity: .5;
+	padding: 3px;
+	position: absolute;
+	right: 5px;
+	top: 5px
+}
+
+._1lvq:hover {
+	opacity: 1
+}
+
+._1lvq .img {
+	display: block
+}
+
+._1luy {
+	z-index: 200 !important
+}
+
+html ._1luz {
+	background-color: #2c2c2c;
+	color: #fff;
+	position: relative
+}
+
+._1luy ._53im ._53io {
+	background-image: url(/homepage/images/PATbCacw1Bw.png);
+	background-repeat: no-repeat;
+	background-size: auto;
+	background-position: 0 -17px
+}
+
+._1luy._3qz8 ._53im ._53io {
+	background-image: url(/homepage/images/PATbCacw1Bw.png);
+	background-repeat: no-repeat;
+	background-size: auto;
+	background-position: 0 0
+}
+
+._1luw {
+	display: none
+}
+
+.tinyViewport ._1luw,._1lux {
+	bottom: -6px;
+	display: block;
+	margin-left: 932px;
+	position: absolute;
+	z-index: 300
+}
+
+.hasSmurfbar ._1luw {
+	bottom: -4px;
+	margin-left: 941px
+}
+
+._3oye ._3oyf {
+	display: none
+}
+
+.sp_h73ts9 {
+	background-image: url(/homepage/images/PATbCacw1Bw.png);
+	background-size: auto;
+	background-repeat: no-repeat;
+	display: inline-block;
+	height: 16px;
+	width: 9px
+}
+
+.sx_c69f9b {
+	background-position: 0 0
+}
+
+.sx_c74f99 {
+	background-position: 0 -17px
+}
+
+#bootloader_Xgkpx {
+	height: 42px;
+}
+
+.bootloader_Xgkpx {
+	display: block !important;
+}

@@ -1,0 +1,97 @@
+* { margin:0px; padding:0px; border:0px; }
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,p,blockquote{margin:0;padding:0;}
+body, div, td, li {
+	color:#333333; font-size:12px; font-family:돋움,Dotum,AppleGothic,sans-serif,helvetica;
+}
+
+body{background:url(/images/memo_background.gif);}
+
+#top_area{padding:10px;line-height:150%;}
+#main{padding:10px;}
+#date_area{display:inline-block;width:98%;margin:10px 0 10px 0;text-align:center;padding:5px 0 5px 0;background:#666;border:1px solid #666;color:white;font-weight:bold;}
+
+#all_view_area{display:inline-block;width:95%;margin:10px 10px 10px 10px;text-align:center;padding:5px 0 5px 0;background:#B1E74D;border:1px solid #007000;}
+#all_view_area a{text-decoration:none;}
+#all_view_area a:hover{text-decoration:underline;}
+#all_view_area a:visited{color:black;}
+
+#memo_area{display:inline-block;width:98%;margin:10px 0 10px 0;position:relative;word-wrap: break-word;}
+
+#input_area{display:inline-block;width:98%;margin:10px 0 5px 10px;}
+#input_text{display:inline-block;width:100%;margin:0px;}
+#input_textarea{display:inline-block;width:100%;margin:0px;}
+#input_file{display:block;margin:5px 0 5px 0;}
+
+.nick_area{display:inline-block;vertical-align:middle;margin:0 0 0 0;padding:5px;}
+.memotext{display:inline-block;padding:5px;line-height:130%;min-width:200px;max-width:265px;}
+.date{display:inline-block;color:#666;font-size:11px;margin-top:0px;}
+.input{padding:3px;width:98%;border:1px solid #888;}
+
+.submit{padding:3px;margin:3px 0 3px 0px;background:#B1E74D;border:1px solid #007000;}
+
+.input_button { display: inline-block; background: #FAFAFA; border:1px solid #A3A4A8; padding: 5px 15px 5px 15px; cursor: pointer; color: #333; font-weight:bold; font-size: 12px; line-height: 12px;}
+.input_button_b { display: inline-block; background: #5987CD; border:1px solid #3366CC; padding: 5px 15px 5px 15px; cursor: pointer; color: #fff; font-weight:bold; font-size: 12px; line-height: 12px;}
+.file_upload {margin:0;padding:4px 0px 3px 0px;border:1px solid #999;width:80%;min-width:250px;}
+
+.you {}
+.you .nick_area{float:left;border:1px solid #888;background:white;}
+.you .memotext{float:left;margin:0 0px 0 0px;background:#f5f5f5;border:1px solid #888;}
+.you .singo{float:left;width:20px;}
+
+.me {}
+.me .nick_area{float:right;border:1px solid #007000;background:#B1E74D;}
+.me .memotext{float:right;margin:0 0px 0 0px;background:#B1E74D;border:1px solid #007000;}
+.me .singo{display:block;float:right;width:13px;margin:0;padding:0;}
+
+.you .tri{
+	float:left;
+	margin-top: 3px;
+	margin-left: 5px;
+    width: 0;
+	height: 0;
+	border: 6px solid #888;
+	border-left-width: 0;
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+}
+
+.you .tri6{
+	float:left;
+	margin-top: 3px;
+	margin-left: 5px;
+    width: 0;
+	height: 0;
+}
+
+
+.me .tri{
+	float:right;
+	margin-top: 3px;
+	margin-right: 5px;
+    width: 0;
+	height: 0;
+	border: 6px solid #007000;
+	border-right-width: 0;
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+}
+
+.you .tri6{
+	float:left;
+	margin-top: 3px;
+	margin-left: 5px;
+    width: 0;
+	height: 0;
+}
+.me .tri6{
+	float:right;
+	margin-top: 3px;
+	margin-right: 5px;
+    width: 0;
+	height: 0;
+}
+
+/* .memotext{background:#ACE542;} */
+
+#ponnt1234{left=-100px;top=0;margin-left:-100px;}
+

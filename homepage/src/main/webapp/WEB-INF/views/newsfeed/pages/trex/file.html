@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>파일 첨부</title> 
+<script src="/homepage/js/popup.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" href="/homepage/css/popup.css" type="text/css"  charset="utf-8"/>
+</head>
+<body onload="initUploader();">
+<div class="wrapper">
+	<div class="header">
+		<h1>파일 첨부</h1>
+	</div>	
+	<div class="body">
+		<dl class="alert">
+		    <dt>파일 첨부</dt>
+		    <dd>
+		<form name="form1" method="post" enctype="multipart/form-data" action="file.jsp">
+		<input type="file" name="upload_file"/>
+		<input type="submit" value="등록"/>			
+		</form>
+		</dd>
+		</dl>
+	</div>
+	<div class="footer">
+		<p><a href="#" onclick="closeWindow();" title="닫기" class="close">닫기</a></p>
+	</div>
+</div>
+</body>
+</html>

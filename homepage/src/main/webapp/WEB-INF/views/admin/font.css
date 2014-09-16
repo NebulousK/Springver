@@ -1,0 +1,99 @@
+A:link		{	COLOR: #0457A2; TEXT-DECORATION: none	}
+A:visited	{	COLOR: #585858; TEXT-DECORATION: none	}
+A:hover		{	COLOR: #585858; TEXT-DECORATION: underline	}
+
+A:active	{  text-decoration: underline; color: #585858	}
+.menu					{	FILTER: Alpha(Opacity=100); COLOR: #000000	}
+.menu:hover:unknown		{	FILTER: Alpha(Opacity=100); COLOR: #000000; TEXT-DECORATION: none	}
+.menu:visited:unknown	{	COLOR: #000000; TEXT-DECORATION: none	}
+.menu:link:unknown		{	COLOR: #000000; TEXT-DECORATION: none	}
+.coloredrow {FONT-WEIGHT: bold; COLOR: #ffffff; BACKGROUND-COLOR: #DDEEFF	}
+
+TD { FONT-SIZE: 9pt }
+
+.form {
+	BORDER-RIGHT: #666666 1px solid;
+	BORDER-TOP: #666666 1px solid;
+	FONT-SIZE: 9pt; BORDER-LEFT: #666666 1px solid;
+	COLOR: #666666;
+	BORDER-BOTTOM: #666666 1px solid;
+	face: ����
+}
+
+.button{
+    BORDER-RIGHT: #666666 1px solid; BORDER-TOP: #666666 1px solid;	FONT-SIZE: 9pt; BORDER-LEFT: #666666 1px solid; FONT-SIZE: 9pt;
+	COLOR: #333333;	 BACKGROUND-COLOR: #ffffff; BORDER-BOTTOM: #666666 1px solid; HEIGHT: 17px; WIDTH: 50px; face: ����
+}
+
+BODY	{ 
+scrollbar-face-color: #ffffff; 
+scrollbar-shadow-color: #ffffff; 
+scrollbar-highlight-color: #000000; 
+scrollbar-3dlight-color: #ffffff; 
+scrollbar-darkshadow-color: #000000; 
+scrollbar-track-color: #ffffff; 
+scrollbar-arrow-color: #000000f;
+}
+
+.style1{
+	float:left;
+	background:#F2F2F2;
+	width:5%;
+	height:100px;
+	border:1px solid black;
+	text-align:center;
+	line-height:100px;
+}
+
+.style2{
+	float:left;
+	background:#F2F2F2;
+	width:10%;
+	height:100px;
+	border:1px solid black;
+	text-align:center;
+	line-height:100px;
+}
+
+.style3{
+	float:left;
+	background:#F2F2F2;
+	width:13%;
+	height:100px;
+	border:1px solid black;
+	text-align:center;
+	line-height:100px;
+}
+
+.style4{
+	float:left;
+	background:#F2F2F2;
+	width:22%;
+	height:100px;
+	border:1px solid black;
+	text-align:center;
+}
+
+.style5{
+	float:left;
+	background:#F2F2F2;
+	width:8%;
+	height: 200px;
+	border:1px solid black;
+	text-align:center;
+	margin-left: auto; 
+	margin-right: auto;
+	line-height:200px;
+}
+
+.style6{
+	float:left;
+	background:#F2F2F2;
+	width:70%;
+	height: 200px;
+	border:1px solid black;
+	text-align:center;
+	margin-left: auto; 
+	margin-right: auto;
+	overflow:scroll;
+}

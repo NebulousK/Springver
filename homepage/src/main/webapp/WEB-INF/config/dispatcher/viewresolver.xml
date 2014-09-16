@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- ResourceBundle 종류는 별도의 파일을 만들어서 사용한다. -->
+	<!-- resourcebundleresolver -->
+	<bean class="org.springframework.web.servlet.view.ResourceBundleViewResolver">
+		<property name="basename">
+			<value>BundleView</value>
+		</property>
+		<property name="order" value="1"></property>
+	</bean>
+	
+	<!--********** ViewResolver *******-->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass">
+			<value>org.springframework.web.servlet.view.JstlView</value>
+		</property>
+		
+		<property name="prefix">
+			<value>/WEB-INF/views/</value>
+		</property>
+		
+		<property name="suffix">
+			<value>.jsp</value>
+		</property>
+		
+		<property name="order" value="2"></property>
+	</bean>
+
+</beans>
