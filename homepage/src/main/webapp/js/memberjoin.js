@@ -9,7 +9,7 @@ function email_write()
  {document.getElementById("email2").style.display = "";}return;}
 
 function FindZip(zip_kind) 
-{window.open("zipcode.jsp?zip_kind="+zip_kind, "", "scrollbars=no,width=500,height=250");}
+{window.open("zipfind.sns?zip_kind="+zip_kind, "", "scrollbars=no,width=500,height=250");}
 
    $(document).ready(function(){
         function readURL(input) {

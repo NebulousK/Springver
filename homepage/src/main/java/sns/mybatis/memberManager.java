@@ -20,14 +20,32 @@ public class memberManager {
 			Reader reader = Resources.getResourceAsReader("applicationContext.xml");
 			sqlMapper = new SqlSessionFactoryBuilder().build(reader);
 		}catch(IOException e){
-			new RuntimeException("sqlsessionfactory ÀÎ½ºÅÏ½º »ý¼º ½ÇÆÐ" + e);
+			new RuntimeException("sqlsessionfactory" + e);
 		}
 	}
 	
 	public static List<someDto> zip(String dong){
-		List<someDto> list = null;
-		SqlSession session = sqlMapper.openSession(); //¸ðµç Ã³¸®°¡ ¼¼¼Ç´ÜÀ§·Î µÇ±â¶§¹®¿¡ ´õ ¾ÈÀüÇØÁ³´Ù.
-		list = session.selectList("zip", dong); //memberMapper.xml ÀÇ select¹® ½ÇÇà ÇÏ°Ú´Ù.
+		List list = null;
+		SqlSession session = sqlMapper.openSession(); //ì„¸ì…˜ ì—°ê²°.
+		list = session.selectList("zip", dong);
 		return list;
+	}
+	
+	public static void member_join(someDto dto){
+		SqlSession session = sqlMapper.openSession();
+		session.insert("member_join", dto);
+		session.commit();
+	}
+	
+	public static String idcheck(String id){
+		SqlSession session = sqlMapper.openSession();
+		String dto = session.selectOne("idcheck", id);
+		return dto;
+	}
+	
+	public static String emailcheck(String email){
+		SqlSession session = sqlMapper.openSession();
+		String dto = session.selectOne("emailcheck", email);
+		return dto;
 	}
 }

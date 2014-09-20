@@ -1,5 +1,5 @@
  <%@page import="java.util.ArrayList"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -20,7 +20,7 @@
 		</tr>
 		<tr>
 			<td>
-				<form name="form" method="post" action="/homepage/zip.me">
+				<form name="form" method="post" action="/homepage/zip.sns">
 					<table width="385" border="0" cellspacing="0" cellpadding="0" align="center">
 						<tr>
 							<td width="14">&nbsp;</td>
@@ -48,8 +48,7 @@
 	</table>
 
 	<table width="500" border="0" cellpadding="0" cellspacing="0">
-		<form name="form1">
-				
+		<form name="form1">	
 			<tr>
 				<td align="center"><select style="BACKGROUND-COLOR: #E3E7EB" border="0" name="post_no" style="width:440;font-size:9pt">
 			 	<c:if test="${requestScope.g != null}">

@@ -18,13 +18,21 @@ public class memberDaoImpl implements memberDao {
 	
 	public void setJdbcTemplate(JdbcTemplate jdbcTemplate){
 		this.jdbcTemplate=jdbcTemplate;
-		
 	}
 	
 	public List<someDto> zip(String dong) throws SQLException {
 		return memberManager.zip(dong);
 	}
 
-	
+	public void member_join(someDto dto) throws SQLException {
+		memberManager.member_join(dto);
+	}
 
+	public String idcheck(String id) throws SQLException {
+		return memberManager.idcheck(id);
+	}
+
+	public String eamilcheck(String email) throws SQLException {
+		return memberManager.emailcheck(email);
+	}
 }

@@ -454,6 +454,7 @@ function createXhr(){
         xhr = new XMLHttpRequest();
     }
 }
+
 function idcheck(){
     var id = document.getElementById("id").value;
     var queryString = "command=idcheck&id="+id;
@@ -465,7 +466,7 @@ function idcheck(){
         // 2. 이벤트 핸들러 등록
         xhr.onreadystatechange = callback;  // callback 함수를 등록
         // 3. open()를 통해 요청관련 설정을 설정
-        xhr.open("POST", "/homepage/javascript_ajax_class/AjaxServlet", true);
+        xhr.open("POST", "/homepage/idcheck.sns", true);
         // 4. Header에 contentType 지정 - post
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         // 5. send()를 통해 요청
@@ -493,7 +494,7 @@ function emailcheck(){
         // 2. 이벤트 핸들러 등록
         xhr.onreadystatechange = callback2;  // callback 함수를 등록
         // 3. open()를 통해 요청관련 설정을 설정
-        xhr.open("POST", "/homepage/javascript_ajax_class/AjaxServlet", true);
+        xhr.open("POST", "/homepage/emailcheck.sns", true);
         // 4. Header에 contentType 지정 - post
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         // 5. send()를 통해 요청

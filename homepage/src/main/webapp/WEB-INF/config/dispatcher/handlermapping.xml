@@ -10,11 +10,17 @@
 	<!-- <context:annotation-config/> -->
 	<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"></bean>
 	
+	<bean id="multipartResolver"  class="org.springframework.web.multipart.commons.CommonsMultipartResolver"></bean>
+		
 	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
 		<property name="mappings">
 			<props>
 				<prop key="/member_join.sns">memberController</prop>
 			 	<prop key="/zip.sns">memberController</prop> 
+			 	<prop key="/zipfind.sns">memberController</prop>
+			 	<prop key="/idcheck.sns">memberController</prop>
+			 	<prop key="/emailcheck.sns">memberController</prop>
+			 	<prop key="/join.sns">memberController</prop>
 			</props>
 		</property>
 	</bean>

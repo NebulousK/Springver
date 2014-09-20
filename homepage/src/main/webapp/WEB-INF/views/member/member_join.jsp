@@ -62,7 +62,7 @@
                               <div class="customDiv2" align="center">
                                  <img id="blah" src="/homepage/images/noData.gif" style="max-width: 450px; max-height: 460px;" /> 
                                  <br/><br/> 
-                                 <span id="fileInputForm" style="position:relative; float:left; width:100px; height:30px; overflow:hidden; cursor:pointer; background-image:url('../images/cc.png');">
+                                 <span id="fileInputForm" style="position:relative; float:left; width:100px; height:30px; overflow:hidden; cursor:pointer; background-image:url('/homepage/images/cc.png');">
                                  <input type="file" id="imgInp" name="imgInp" style='position：absolute; margin-left:-10px; width:62px; height:18px; filter:alpha(opacity=0); opacity:0; -moz-opacity:0; cursor:pointer;'>
                                  <br/><span id="imgs"></span>
                                  </span>
@@ -72,7 +72,6 @@
                            <div class="span5" style="margin-right: 0;">
                               <table align="center">
                                  <tr>
-                                    <input type="hidden" name="action" id="action" value="join"/>
                                     <td style="padding-right: 70px">아이디</td>
                                     <td><input type="text" style="width: 150px" maxlength="12" name="id" id="id" onchange="idcheck()"/>
                                     <br/>

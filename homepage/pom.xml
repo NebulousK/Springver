@@ -24,7 +24,7 @@
 	<dependency>
 		<groupId>org.springframework</groupId>
 		<artifactId>spring-webmvc</artifactId>
-		<version>4.0.6.RELEASE</version>
+		<version>4.1.0.RELEASE</version>
 	</dependency>
 	
 	<dependency>
@@ -63,6 +63,13 @@
 		<artifactId>mybatis</artifactId>
 		<version>3.2.7</version>
 	</dependency>
+	
+	<dependency>
+   		<groupId>commons-fileupload</groupId>
+   		<artifactId>commons-fileupload</artifactId>
+   		<version>1.3</version> 
+	</dependency>
+
   </dependencies>
   <build>
     <finalName>neublousk</finalName>

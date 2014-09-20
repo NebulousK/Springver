@@ -4,10 +4,24 @@
 <mapper namespace="sns.mapper.memberMapper">
 	<cache />
 	
-	<select id="zip" parameterType="string" resultType="someDto">
-		select * 
-		from zip 
-		where juso3 
-		like %#{dong}%
+	<select id="zip" parameterType="String" resultType="someDto">
+		SELECT * 
+		FROM  `zip` 
+		where juso3 like #{dong}
+	</select>
+	
+	<insert id="member_join" parameterType="someDto">
+		INSERT INTO member(id, password, name, sex, birthday, addr, tel, photo, age, `e-mail`,confirmState) 
+		VALUES(#{id},#{password},#{name},#{sex},#{birthday},#{addr},#{tel},#{photo},#{age},#{e-mail},#{confirmState})	
+	</insert>
+	
+	<select id="idcheck" parameterType="string" resultType="string">
+		select id from member 
+		where id = #{id}
+	</select>
+	
+	<select id="emailcheck" parameterType="string" resultType="string">
+		select `e-mail` from member
+		where `e-mail` = #{email}
 	</select>
 </mapper>

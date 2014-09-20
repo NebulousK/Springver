@@ -1,7 +1,3 @@
-<%@page import="homepage.someDto"%>
-<%@page import="homepage.board.ReplyDto"%>
-<%@page import="homepage.board.BoardDto"%>
-<%@page import="homepage.board.BoardDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" import="java.util.*"%>
 <html>
 <head>

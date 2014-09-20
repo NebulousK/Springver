@@ -1,13 +1,21 @@
 package sns.model;
+import org.springframework.web.multipart.MultipartFile;
 
 public class someDto {
-	private int no, num, hit, like, parent, age, height, height2, weight, weight2, state, zip, zip2, itemID, userID;
-	private String id, content, day, filename, desination, filesize, filetype, fileurl,juso1, juso2, juso3, juso4, date, coment, 
-			regist_day, userid1, userid2, friends, blood, hobby, style, password, blood2, hobby2, fashion2, style2, fashion3,   
+	private int no, num, hit, like, parent, age, height, height2, weight, weight2, state, zip, zip1, zip2, itemID, userID;
+	private String id, content, day, filename, desination, filesize, filetype, fileurl, date, coment, juso, juso1, juso2, juso3, juso4,
+			regist_day, userid1, userid2, friends, blood, hobby, style, password, blood2, hobby2, fashion2, style2, fashion3,    
 			name, sex, birthday, addr, tel, tel2, tel3, photo, sender, dear, myid,group, userid, man_ID,woman_ID, start_Day, end_Day, fashion, 
-			confirmState, email, key, email2, birth, birth2, birth3, title, start, end, check, num1, num2, check_password, email1, fileName;
+			confirmState, email, key, email2, email3, birth, birth2, birth3, title, start, end, check, num1, num2, check_password, email1, fileName, year, month;
+	private MultipartFile upFile, imgInp;
 	private float value;
 	
+	public MultipartFile getUpFile() {
+		return upFile;
+	}
+	public void setUpFile(MultipartFile upFile) {
+		this.upFile = upFile;
+	}
 	public int getNo() {
 		return no;
 	}
@@ -145,30 +153,6 @@ public class someDto {
 	}
 	public void setFileurl(String fileurl) {
 		this.fileurl = fileurl;
-	}
-	public String getJuso1() {
-		return juso1;
-	}
-	public void setJuso1(String juso1) {
-		this.juso1 = juso1;
-	}
-	public String getJuso2() {
-		return juso2;
-	}
-	public void setJuso2(String juso2) {
-		this.juso2 = juso2;
-	}
-	public String getJuso3() {
-		return juso3;
-	}
-	public void setJuso3(String juso3) {
-		this.juso3 = juso3;
-	}
-	public String getJuso4() {
-		return juso4;
-	}
-	public void setJuso4(String juso4) {
-		this.juso4 = juso4;
 	}
 	public String getDate() {
 		return date;
@@ -470,5 +454,66 @@ public class someDto {
 	public void setValue(float value) {
 		this.value = value;
 	}
+	public String getEmail3() {
+		return email3;
+	}
+	public void setEmail3(String email3) {
+		this.email3 = email3;
+	}
+	public String getYear() {
+		return year;
+	}
+	public void setYear(String year) {
+		this.year = year;
+	}
+	public String getMonth() {
+		return month;
+	}
+	public void setMonth(String month) {
+		this.month = month;
+	}
+	public int getZip1() {
+		return zip1;
+	}
+	public void setZip1(int zip1) {
+		this.zip1 = zip1;
+	}
+	public String getJuso() {
+		return juso;
+	}
+	public void setJuso(String juso) {
+		this.juso = juso;
+	}
+	public MultipartFile getImgInp() {
+		return imgInp;
+	}
+	public void setImgInp(MultipartFile imgInp) {
+		this.imgInp = imgInp;
+	}
+	public String getJuso1() {
+		return juso1;
+	}
+	public void setJuso1(String juso1) {
+		this.juso1 = juso1;
+	}
+	public String getJuso2() {
+		return juso2;
+	}
+	public void setJuso2(String juso2) {
+		this.juso2 = juso2;
+	}
+	public String getJuso3() {
+		return juso3;
+	}
+	public void setJuso3(String juso3) {
+		this.juso3 = juso3;
+	}
+	public String getJuso4() {
+		return juso4;
+	}
+	public void setJuso4(String juso4) {
+		this.juso4 = juso4;
+	}
+	
 }
 	 
