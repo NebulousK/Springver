@@ -12,7 +12,22 @@
 	
 	<insert id="member_join" parameterType="someDto">
 		INSERT INTO member(id, password, name, sex, birthday, addr, tel, photo, age, `e-mail`,confirmState) 
-		VALUES(#{id},#{password},#{name},#{sex},#{birthday},#{addr},#{tel},#{photo},#{age},#{e-mail},#{confirmState})	
+		VALUES(#{id},#{password},#{name},#{sex},#{birthday},#{addr},#{tel},#{photo},#{age},#{email},#{confirmState})	
+	</insert>
+	
+	<select id="getmemberno" parameterType="string" resultType="int">
+		select no from member 
+		where id = #{id}
+	</select>
+	
+	<insert id="m_profile" parameterType="someDto">
+		INSERT INTO m_profile(no, height, hobby, blood, style, weight, fashion) 
+		VALUES(#{no}, #{height}, #{hobby}, #{blood}, #{style}, #{weight}, #{fashion})
+	</insert>
+	
+	<insert id="idealtype" parameterType="someDto">
+		INSERT INTO idealtype(no, height, hobby, blood, style, weight, fashion, age) 
+		VALUES(#{no}, #{height2}, #{hobby2}, #{blood2}, #{style2}, #{weight2}, #{fashion2}, #{age})
 	</insert>
 	
 	<select id="idcheck" parameterType="string" resultType="string">

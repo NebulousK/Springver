@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-   pageEncoding="UTF-8" import="java.util.*"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" import="java.util.*" isELIgnored="false"%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -46,8 +45,9 @@
                   <!-- <div class="row"> -->
                      <h2>세부정보 입력</h2>
                      <div class="span12">
-                        <h3>본인의 세부정보</h3>
-                        <form name="form1" action="/homepage/join2.me" method="post">
+                        <h3>본인의 세부정보 </h3>
+                        <form name="form1" action="/homepage/join2.sns" method="post">
+                        <input type="hidden" name="id" id="id" value="${id}">
                         <table align="center">
                            <tr>
                               <td style="width: 50px">혈액형</td>

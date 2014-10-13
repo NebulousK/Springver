@@ -1,27 +1,18 @@
 package sns.controller;
 
-import java.io.File;
-import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
-import java.util.Calendar;
 import java.util.List;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.util.FileCopyUtils;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.util.WebUtils;
 import sns.member.repository.memberDao;
 import sns.model.someDto;
 
@@ -55,35 +46,25 @@ public class memberController {
 	}
 	
 	@RequestMapping(value="/join.sns",method=RequestMethod.POST)
-	public String member_join(@ModelAttribute("form1") someDto dto, HttpServletRequest req, ModelMap model){
+	public ModelAndView member_join(@ModelAttribute("form1") someDto dto, HttpServletRequest req, ModelMap model){
 		try{
-			String path = WebUtils.getRealPath(req.getSession().getServletContext(), "/profile");
-			byte[] bytes = dto.getImgInp().getBytes();
-			File file = new File(path, dto.getImgInp().getOriginalFilename());
-			if(file.exists()){
-				Calendar cal = Calendar.getInstance();
-				String dateString, timeString;
-				dateString = String.format("%04d-%02d-%02d", cal.get(Calendar.YEAR), cal.get(Calendar.MONTH) + 1, cal.get(Calendar.DAY_OF_MONTH));
-				timeString = String.format("%02d:%02d:%02d", cal.get(Calendar.HOUR_OF_DAY), cal.get(Calendar.MINUTE), cal.get(Calendar.SECOND));
-				file = new File(path, dateString + "+" + timeString + "+" + dto.getImgInp().getOriginalFilename());
-			}
-			FileCopyUtils.copy(bytes, file);
-			/*
-			if(dto.getEmail2().equals(null) || dto.getEmail2().equals("")){
-				dto.setEmail(dto.getEmail2() + "@" + dto.getEmail3());
-			}else{
-				dto.setEmail(dto.getEmail1() + "@" + dto.getEmail3());
-			}
-			dto.setAge((Calendar.getInstance().get(Calendar.YEAR) - Integer.parseInt(dto.getYear())) + 1);
-			dto.setBirthday(dto.getYear() + "," + dto.getMonth() + "," + dto.getDay());
-			dto.setAddr(dto.getZip1() + dto.getZip2() + dto.getJuso() + dto.getAddr());
-			dto.setTel(dto.getTel() + "-" + dto.getTel2() + "-" + dto.getTel3());
-			dto.setPhoto(dto.getImgInp().getOriginalFilename());
-			memberDao.member_join(dto);*/
-		}catch(Exception e){
+			memberDao.member_join(dto, req);
+	    }catch(Exception e){
 			e.printStackTrace();
 		}
-		return "member/member_join2";
+		ModelAndView view = new ModelAndView("member/member_join2");
+		view.addObject("id", req.getParameter("id"));
+		return view;
+	}
+
+	@RequestMapping(value="/join2.sns",method=RequestMethod.POST)
+	public String member_join2(@ModelAttribute("form1") someDto dto){
+		try{
+			memberDao.member_join2(dto);
+	    }catch(Exception e){
+			e.printStackTrace();
+		}
+		return "member/member_complete";
 	}
 	
 	@RequestMapping(value="/idcheck.sns")

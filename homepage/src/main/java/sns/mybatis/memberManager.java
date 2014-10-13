@@ -37,6 +37,24 @@ public class memberManager {
 		session.commit();
 	}
 	
+	public static int getmemberno(String id){
+		SqlSession session = sqlMapper.openSession();
+		int no = session.selectOne("getmemberno", id);
+		return no;
+	}
+	
+	public static void m_profile(someDto dto){
+		SqlSession session = sqlMapper.openSession();
+		session.insert("m_profile", dto);
+		session.commit();
+	}
+	
+	public static void idealtype(someDto dto){
+		SqlSession session = sqlMapper.openSession();
+		session.insert("idealtype", dto);
+		session.commit();	
+	}
+	
 	public static String idcheck(String id){
 		SqlSession session = sqlMapper.openSession();
 		String dto = session.selectOne("idcheck", id);
@@ -48,4 +66,5 @@ public class memberManager {
 		String dto = session.selectOne("emailcheck", email);
 		return dto;
 	}
+	
 }

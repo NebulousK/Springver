@@ -21,6 +21,7 @@
 			 	<prop key="/idcheck.sns">memberController</prop>
 			 	<prop key="/emailcheck.sns">memberController</prop>
 			 	<prop key="/join.sns">memberController</prop>
+			 	<prop key="/join2.sns">memberController</prop>
 			</props>
 		</property>
 	</bean>
